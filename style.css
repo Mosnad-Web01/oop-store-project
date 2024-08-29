@@ -1,1 +1,6 @@
 /* Write your custom CSS here ONLY if necessary */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
