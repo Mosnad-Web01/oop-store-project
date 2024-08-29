@@ -3,8 +3,8 @@
 class App {
 	static async run() {
 		const products = await APIService.fetchProducts();
-    console.log(products);
-    
+		console.log(products);
+
 		HomePage.renderProducts(products);
 	}
 }
@@ -51,7 +51,7 @@ class HomePage {
 
 		products.forEach((product) => {
 			const productDiv = document.createElement("div");
-
+      productDiv.id = product.id;
 			productDiv.classList.add(
 				"bg-gradient-to-br",
 				"from-blue-50",
@@ -128,12 +128,11 @@ class Product {
 		this.id = json.id;
 		this.title = json.title;
 		this.image = json.image;
-    this.price = json.price;
-    this.category = json.category;
-    this.description = json.description;
-    this.rating = json.rating.rate;
-    this.count =json.rating.count;
-    
+		this.price = json.price;
+		this.category = json.category;
+		this.description = json.description;
+		this.rating = json.rating.rate;
+		this.count = json.rating.count;
 	}
 }
 
